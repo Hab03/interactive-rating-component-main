@@ -77,6 +77,10 @@ body {
   color: hsl(217, 12%, 63%); 
   cursor: pointer; 
 }
+.rating-zone button:focus{
+  background-color:hsl(217, 12%, 63%);
+  color: aliceblue;
+}
 .submit{
   display:flex;
   align-items:center ;
