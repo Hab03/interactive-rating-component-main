@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js"></script>
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <div class="main">
+      <div class="main-content">
+        <div class="icon-star-container">
+          <div class="circle">
+            <img
+              style="height: 15px; width: 15px"
+              src="./images/icon-star.svg"
+              alt="star-image"
+            />
+          </div>
+        </div>
+
+        <div class="text-zone">
+          <div class="how">How did we do?</div>
+          <div class="plain-text">
+            <p>Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!</p>
+          </div>
+        </div>
+        <!-- Add rating here -->
+        <div class="rating-zone">
+          <span onclick="handleClick(1)" id="one">
+            <button class="one" type="button">1</button>
+          </span>
+          <span onclick="handleClick(2)" id="two"
+            ><button class="one" type="button">2</button>
+          </span>
+          <span onclick="handleClick(3)" id="three"
+            ><button class="one" type="button">3</button>
+          </span>
+          <span onclick="handleClick(4)" id="four"
+            ><button class="one" type="button">4</button>
+          </span>
+          <span onclick="handleClick(5)" id="five"
+            ><button class="one" type="button">5</button>
+          </span>
+        </div>
+        <div class="submit">
+        <button class="submit-hover" onclick="handleSubmit()">SUBMIT</button>
+      </div>
+      </div>
+    </div>
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+    <div class="thank-you-state" style="display: none">
+      <div class="image-sec">
+        <img src="./images/illustration-thank-you.svg" alt="thankyou-image" />
+      </div>
+      <div class="display-msg">
+        <span class="innerCircle">
+          <p>You selected <span id="indexToBeChanged"></span> out of 5</p>
+        </span>
+      </div>
+      <div class="thank-you">Thank you!</div>
+
+      <div class="text-area">
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+    </div>
+    <!-- Thank you state end -->
+  </body>
+</html>
